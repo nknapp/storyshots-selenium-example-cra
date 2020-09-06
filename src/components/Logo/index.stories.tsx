@@ -7,7 +7,7 @@ export default {
 
 export const DefaultSize = (): JSX.Element => {
   return (
-    <div style={{ border: "1px solid black" }}>
+    <div>
       <Logo />
     </div>
   );
@@ -15,7 +15,7 @@ export const DefaultSize = (): JSX.Element => {
 
 export const Smaller = (): JSX.Element => {
   return (
-    <div style={{ border: "1px solid black" }}>
+    <div>
       <Logo style={{ width: "2rem", height: "2rem" }} />
     </div>
   );

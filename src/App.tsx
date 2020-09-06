@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import {Layout} from "./layout/Layout";
 import {Logo} from "./components/Logo";
+import {Sidebar} from "./components/Sidebar";
 
 function App() {
   return (
@@ -12,12 +13,7 @@ function App() {
         </div>
       }
       sidebar={
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ul>
+        <Sidebar />
       }
       content={
         <div>

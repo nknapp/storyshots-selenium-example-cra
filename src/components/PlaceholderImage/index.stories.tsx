@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Story } from "@storybook/react";
 
 export default {
-  title: "components/Placeholder",
+  title: "components/PlaceholderImage",
 };
 
 export const Default = (): JSX.Element => {
@@ -107,5 +107,7 @@ export const BackgroundImageCover: Story = () => {
 };
 
 BackgroundImageCover.parameters = {
-  layout: "fullscreen",
-};
+    storyshotSelenium: {
+        sizes: ["1024x768", "800x600", "360x480"]
+    }
+}

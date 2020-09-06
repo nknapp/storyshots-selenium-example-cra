@@ -7,3 +7,9 @@ export default {
 };
 
 export const Default: Story = () => <App />;
+
+Default.parameters= {
+  storyshotSelenium: {
+    sizes: ["1024x768", "800x600", "360x480"]
+  }
+}

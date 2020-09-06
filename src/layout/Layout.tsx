@@ -18,8 +18,11 @@ const StContainer = styled.div`
     "sidebar content content";
   
   @media only screen and (max-width: 600px) {
+  grid-template-columns: 20% 1fr 3rem;
+  grid-template-rows: 3rem auto 1fr;
     grid-template-areas: 
     "navigation navigation menu"
+    "mobile-sidebar mobile-sidebar mobile-sidebar"
     "content content content";
   }
 }
@@ -34,7 +37,6 @@ const StNavigation = styled.div`
 const StSidebar = styled.div`
   grid-area: sidebar;
   border-right: 1px dashed black;
-  padding: 1rem;
   @media only screen and (max-width: 600px) {
     display: none;
   }
@@ -63,10 +65,9 @@ const StMenu = styled.div`
 const StMobileSidebar = styled.div`
   display: none;
   @media only screen and (max-width: 600px) {
+    grid-area: mobile-sidebar;
     display: block;
-    border-bottom: 1px dashed black;
-    padding: 1rem;
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
   }
 `;
 
@@ -83,12 +84,8 @@ export const Layout: React.FC<{
         X
       </StMenu>
       <StSidebar>{sidebar}</StSidebar>
-      <StContent>
-        {showMobileSidebar ? (
-          <StMobileSidebar>{sidebar}</StMobileSidebar>
-        ) : null}
-        {content}
-      </StContent>
+      {showMobileSidebar ? <StMobileSidebar>{sidebar}</StMobileSidebar> : null}
+      <StContent>{content}</StContent>
     </StContainer>
   );
 };
