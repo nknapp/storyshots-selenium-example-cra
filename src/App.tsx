@@ -9,7 +9,7 @@ function App() {
     <Layout
       navigation={
         <div>
-          <Logo style={{ width: "2rem", height: "2rem", transform: "rotate(10deg)" }} />
+          <Logo style={{ width: "2rem", height: "2rem" }} />
         </div>
       }
       sidebar={
