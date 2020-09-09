@@ -28,6 +28,6 @@ export const DefaultLayout = () => (
   <Layout
     navigation={<PlaceHolder color="#7777ff" text="navigation" />}
     sidebar={<PlaceHolder color="#77ff77" text="sidebar" />}
-    content={<PlaceHolder color="white" text="content" />}
+    content={<img src={"http://placekitten.com/300/300"} />}
   />
 );
